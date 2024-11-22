@@ -3,4 +3,53 @@
   alt="Pokemon Logo"
   class="logo"
 />
-<app-trainer-list></app-trainer-list>
+<div class="container-fluid" id="principal">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <router-outlet>
+          <nav
+          class="navbar navbar-expand-lg navbar-dark"
+          style="background-color: #dc3545"
+          >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pokemon</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    routerLink="trainers/list"
+                    >trainers</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="pokemons/:id">Pokemon</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </nav>
+        </router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer">
+  <div class="footer-copyright text-center py-2">
+    Sample proyect -
+    <a routerLink="trainers/list" id="colorFooterText2"> Trainer</a>
+  </div>
+</footer>
